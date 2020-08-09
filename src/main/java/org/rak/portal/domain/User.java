@@ -1,5 +1,6 @@
 package org.rak.portal.domain;
 
+import java.math.BigInteger;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -38,7 +39,7 @@ public class User {
 	private Date dateOfBirth;
 	
 	@Column(name = "phone_number")
-	private Long phoneNumber;
+	private BigInteger phoneNumber;
 	
 	@Column(name = "email")
 	private String email;

@@ -1,5 +1,6 @@
 package org.rak.portal.api;
 
+import java.math.BigInteger;
 import java.util.Date;
 
 import com.sun.istack.NotNull;
@@ -28,7 +29,7 @@ public class UserApi {
 	private Date dateOfBirth;
 	
 	@NotNull
-	private Long phoneNumber;
+	private BigInteger phoneNumber;
 	
 	private String email;
 	

@@ -1,5 +1,6 @@
 package org.rak.portal.service;
 
+import java.math.BigInteger;
 import java.util.List;
 import java.util.Optional;
 
@@ -20,6 +21,10 @@ public class UserService {
 
 	public Optional<User> getUserById(Integer userId) {
 		return this.userRepository.findById(userId);
+	}
+	
+	public Optional<User> getUserByMobileNumber(BigInteger mobileNumber) {
+		return this.userRepository.findByMobileNumber(mobileNumber);
 	}
 	
 	public List<User> getAllUsers() {
