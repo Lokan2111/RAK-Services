@@ -9,6 +9,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.NumberFormat;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -36,9 +40,11 @@ public class User {
 	private String lastName;
 	
 	@Column(name = "date_of_birth")
+	@DateTimeFormat(pattern = "dd-MM-yyyy")
 	private Date dateOfBirth;
 	
 	@Column(name = "phone_number")
+	@NumberFormat(pattern = "#")
 	private BigInteger phoneNumber;
 	
 	@Column(name = "email")

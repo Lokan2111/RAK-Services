@@ -3,6 +3,7 @@ package org.rak.portal.api;
 import java.math.BigInteger;
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.sun.istack.NotNull;
 
 import lombok.AllArgsConstructor;
@@ -26,6 +27,7 @@ public class UserRequest {
 	private String lastName;
 
 	@NotNull
+	@JsonFormat(pattern = "dd-MM-yyyy")
 	private Date dateOfBirth;
 	
 	@NotNull
