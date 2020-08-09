@@ -1,24 +1,26 @@
-package org.rak.portal;
+package org.rak.portal.domain;
 
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-
 import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@EntityScan
+@Entity
 @Table(name = "User")
 @AllArgsConstructor
-@Getter
-@Setter
+@NoArgsConstructor
+@Data
+@Builder
 public class User {
 	
 	@Id
@@ -37,6 +39,9 @@ public class User {
 	
 	@Column(name = "phone_number")
 	private Long phoneNumber;
+	
+	@Column(name = "email")
+	private String email;
 	
 	@Column(name = "profession")
 	private String profession;

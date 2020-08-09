@@ -15,4 +15,5 @@ public class RegisterController {
         return "You are authenticated";
     }
 
+	
 }
